@@ -34,7 +34,7 @@ Here are the study materials available for each semester. Click on the links to 
 
 - [x] [Semester 1 &rarr; (Fall 2023)](https://github.com/Ubaid01/NED-University-CSIT-Department-Study-Materials/tree/main/1st%20Semester)
 - [x] [Semester 2 &rarr; (Spring 2024)](https://github.com/Ubaid01/NED-University-CSIT-Department-Study-Materials/tree/main/2nd%20Semester)
-- [ ] Semester 3 (Coming Soon)
+- [x] [Semester 3 &rarr;(Fall 2024)](https://github.com/Ubaid01/NED-University-CSIT-Department-Study-Materials/tree/main/3rd%20Semester)
 - [ ] Semester 4 (Coming Soon)
 - [ ] Semester 5 (Coming Soon)
 - [ ] Semester 6 (Coming Soon)
