@@ -25,11 +25,11 @@ vector<int> primeFactors( int num ) {
 // New Time = O( n * log(log(N) )
 vector<int> sieveOfEratosthenes( int num ) {
     vector<bool> isPrime( num + 1 , true ) ;
-    isPrime[0] = isPrime[1] = true ; // '0' , '1' are primes with all their factors also.
+    isPrime[0] = isPrime[1] = false ; // '0' and '1' dependent on Condition but are not considered prime for SIEVE.
 
     for( int i = 2 ; i * i <= num ; i++ ) { // OR i <= sqrt(num) as all above will covered if factors.
         if( isPrime[i] ) {
-            for( int j = 2 * i ; j <= num ; j += i )
+            for( int j = i * i ; j <= num ; j += i ) // Start multiples from i * i rather than 2 * i as they will be marked previously.
                 isPrime[j] = false ;
         }
     } 
