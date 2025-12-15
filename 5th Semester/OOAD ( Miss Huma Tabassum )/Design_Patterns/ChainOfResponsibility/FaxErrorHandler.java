@@ -1,6 +1,5 @@
 package ChainOfResponsibility;
 
-//FaxErrorHandler class
 public class FaxErrorHandler implements Receiver{
 	private Receiver nextReceiver;
 	
@@ -17,7 +16,7 @@ public class FaxErrorHandler implements Receiver{
 		}
 		else {
 			if (nextReceiver != null)
-			nextReceiver.handleMessage(message);
+				nextReceiver.handleMessage(message);
 		}
 		return false;
 	}

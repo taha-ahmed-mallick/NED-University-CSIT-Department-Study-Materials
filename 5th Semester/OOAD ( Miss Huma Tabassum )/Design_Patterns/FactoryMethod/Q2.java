@@ -1,16 +1,7 @@
-/*
-    Implements -> Class from Interface (Interface To Class)
-    Extends -> Child Class From Parent Class (Class To Class)
-*/
-
 public class FactoryExample {
-    public static void main (String args[]) {
-        
-        // Create Windows UI
+    public static void main (String args[]) {        
         Dialog windowsDialog = new WindowsDialog();
         windowsDialog.render();
-
-        // Create Web UI
         Dialog webDialog = new WebDialog();
         webDialog.render();
     }

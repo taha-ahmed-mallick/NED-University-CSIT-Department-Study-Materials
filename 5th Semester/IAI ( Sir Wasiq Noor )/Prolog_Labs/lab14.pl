@@ -1,53 +1,38 @@
+employee(mcardon, 1, 5).
+employee(treeman,  2, 3).
+employee(chapman,  1, 2).
+employee(claessen, 4, 1).
+employee(petersen, 5, 8).
+employee(cohn,     1, 7).
+employee(duffy,    1, 9).
 
-% Students(SID, Name, Major)
-student(1, 'Alice', cs).
-student(2, 'Bob', math).
-student(3, 'Charlie', cs).
-student(4, 'Diana', physics).
+department(1, board).
+department(2, human_resources).
+department(3, production).
+department(4, technical_services).
+department(5, administration).
 
-% Courses(SID, Course, Grade)
-course(1, compilers, a).
-course(1, algorithms, b).
-course(2, calculus, a).
-course(3, compilers, c).
-course(4, quantum, b).
+salary(1, 1000).
+salary(2, 1500).
+salary(3, 2000).
+salary(4, 2500).
+salary(5, 3000).
+salary(6, 3500).
+salary(7, 4000).
+salary(8, 4500).
+salary(9, 5000).
 
 
-% SELECT
-select_student_major(Major, SID, Name) :-
-    student(SID, Name, Major).
+selection(X,Y):-
+    call(X), call(Y), write(X), nl, fail.
+selection(_,_).
 
-% PROJECT
-project_student_name(Name) :-
-    student(_, Name, _).
+projection(X,Y):-
+    call(X), write(Y), nl, fail.
 
-% JOIN
-student_course_join(Major, Course, Name, Grade) :-
-    student(SID, Name , Major),
-    course(SID, Course, Grade).
+projection(_,_).
 
-set1(a).
-set1(b).
-set2(b).
-set2(c).
+join(X,Y,Z):-
+    call(X), call(Y), call(Z), write(X) , write(Y), nl, fail.
 
-% UNION ; call() for dynamic predicate passing
-union_sets(Rel1, Rel2, X) :-
-    call(Rel1, X);
-    call(Rel2, X).
-
-% SET DIFFERENCE
-set_difference(Rel1, Rel2, X) :-
-    call(Rel1, X),
-    \+ call(Rel2, X).
-
-% CARTESIAN PRODUCT
-cartesian(Rel1, Rel2, X-Y) :-
-    call(Rel1, X),
-    call(Rel2, Y).
-
-% ?- P = even, call(P, X).
-even(2).
-even(4).
-odd(1).
-odd(3).
+join(_,_,_).

@@ -1,5 +1,3 @@
-%   Muhammad Obaid
-%   CT-23025 Section-A ( Lab-5 )
 likes(fred,cola).
 likes(fred,cheap_cigars).
 likes(fred,monday_night_football).

@@ -1,12 +1,8 @@
 package FactoryMethod;
 
-// Factory Method: Subclasses decide what object to create.
-// Template Method: Subclasses decide how parts of an algorithm behave.
-
 abstract class AnimalFactory {
 	public abstract Animal createAnimal();
 }
-
 
 class DogFactory extends AnimalFactory {
 	public Animal createAnimal() {
@@ -14,7 +10,6 @@ class DogFactory extends AnimalFactory {
 		return new Dog();
 	}
 }
-
 
 class TigerFactory extends AnimalFactory {
 	public Animal createAnimal() {

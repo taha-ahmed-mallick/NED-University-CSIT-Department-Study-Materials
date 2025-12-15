@@ -1,6 +1,5 @@
 package ChainOfResponsibility;
 
-//EmailErrorHandler class
 public class EmailErrorHandler implements Receiver{
 	private Receiver nextReceiver;
 	

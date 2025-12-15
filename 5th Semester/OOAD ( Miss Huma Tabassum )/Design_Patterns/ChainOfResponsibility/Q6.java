@@ -5,7 +5,6 @@ public class OnlineOrderingSystem {
 
         AuthRequest request1 = new AuthRequest("admin", "password123", null);
         authsystem.processAuth(request1);
-
         AuthRequest request2 = new AuthRequest(null, null, "validtoken123");
         authsystem.processAuth(request2);
     }
@@ -29,15 +28,11 @@ class AuthRequest {
 }
 
 
-// -------------------- Handler Interface ----------------------
-
+// Handler Interface
 interface AuthHandler {
     void setNextHandler(AuthHandler nextHandler);
     void authenticate(AuthRequest request);
 }
-
-
-// -------------------- Basic Auth Handler ----------------------
 
 class BasicAuthHandler implements AuthHandler {
     private AuthHandler nextHandler;
@@ -55,21 +50,17 @@ class BasicAuthHandler implements AuthHandler {
 
                 System.out.println("Basic Authentication Successful!");
 
-            } else {
+            } 
+            else
                 System.out.println("Basic Authentication Failed – Invalid credentials!");
-            }
-        } else {
+        } 
+        else
             System.out.println("Basic Auth Skipped – No username/password provided.");
-        }
 
-        if (nextHandler != null) {
-            nextHandler.authenticate(request);
-        }
+        if (nextHandler != null)
+            nextHandler.authenticate(request) ;
     }
 }
-
-
-// -------------------- Token Auth Handler ----------------------
 
 class TokenAuthHandler implements AuthHandler {
     private AuthHandler nextHandler;
@@ -83,27 +74,22 @@ class TokenAuthHandler implements AuthHandler {
     public void authenticate(AuthRequest request) {
         if (request.getToken() != null) {
 
-            if ("validtoken123".equals(request.getToken())) {
+            if ("validtoken123".equals(request.getToken()))
                 System.out.println("Token Authentication Successful!");
-            } else {
+            else
                 System.out.println("Token Authentication Failed – Invalid Token!");
-            }
-
-        } else {
+        } 
+        else
             System.out.println("Token Auth Skipped – No token provided.");
-        }
 
-        if (nextHandler != null) {
+        if (nextHandler != null)
             nextHandler.authenticate(request);
-        }
     }
 }
 
 
-// -------------------- Auth System (Client) ----------------------
-
+// AuthSystem (Client)
 class AuthSystem {
-
     private AuthHandler chain;
 
     public AuthSystem() {

@@ -1,9 +1,8 @@
 package ChainOfResponsibility;
 
 public class ChainOfResponsibilityExample {
-
 	public static void main(String[] args) {
-		System.out.println("\n ***Chain of Responsibility Pattern Demo***\n");
+		System.out.println("\nChain of Responsibility Pattern Demo: \n");
 		
 		// Forming the chain as IssueRaiser->FaxErrorhandler->EmailErrorHandler
 		Receiver faxHandler, emailHandler;
@@ -27,11 +26,9 @@ public class ChainOfResponsibilityExample {
 		Message m2 = new Message("Emails are not reaching.", MessagePriority.HIGH);
 		Message m3 = new Message("In Email, CC field is disabled always.", MessagePriority.NORMAL);
 		Message m4 = new Message("Fax is not reaching destinations.", MessagePriority.HIGH);
-		
 		issueRaiser.raiseMessage(m1);
 		issueRaiser.raiseMessage(m2);
 		issueRaiser.raiseMessage(m3);
 		issueRaiser.raiseMessage(m4);
 	}
-
 }

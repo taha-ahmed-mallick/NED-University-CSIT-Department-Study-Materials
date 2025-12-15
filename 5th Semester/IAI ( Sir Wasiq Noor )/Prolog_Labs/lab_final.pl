@@ -1,5 +1,3 @@
-
-
 read_from_file(File):-
     open(File, read, Stream),
     get_char(Stream,Ch),
@@ -14,13 +12,11 @@ process_the_stream(Ch,Stream):-
     process_the_stream(Ch2,Stream).
 
 
-
 write_in_file(File, Val):-
     open(File, write, Stream),
     write(Stream, Val), nl(Stream),
     write('Saved in C:Documents/Prolog/'), write(File), nl ,
     close(Stream).
-
 
 
 q1:-

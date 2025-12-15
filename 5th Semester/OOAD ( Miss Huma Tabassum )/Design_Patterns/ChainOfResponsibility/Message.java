@@ -8,5 +8,4 @@ public class Message {
 		text = msg;
 		this.priority = p;
 	}
-
 }

@@ -4,17 +4,14 @@ class AdapterPatternExample {
         // Test Class Adapters
         XmlToJsonClassAdapter xmlToJsonClass = new XmlToJsonClassAdapter();
         JsonToXmlClassAdapter jsonToXmlClass = new JsonToXmlClassAdapter();
-
         XMLData xmlData = new XMLData("<user>John</user>");
         JSONData jsonData = new JSONData("{\"name\": \"John\"}");
-
         System.out.println("XML to JSON (Class): " + xmlToJsonClass.convertToJson(xmlData));
         System.out.println("JSON to XML (Class): " + jsonToXmlClass.convertToXml(jsonData));
 
         // Test Object Adapters
         XmlToJsonObjectAdapter xmlToJsonObject = new XmlToJsonObjectAdapter();
         JsonToXmlObjectAdapter jsonToXmlObject = new JsonToXmlObjectAdapter();
-
         System.out.println("XML to JSON (Object): " + xmlToJsonObject.convertToJson(xmlData));
         System.out.println("JSON to XML (Object): " + jsonToXmlObject.convertToXml(jsonData));
     }
@@ -50,11 +47,7 @@ class JSONData {
     }
 }
 
-// ---------------------------------------------------------
-// CLASS ADAPTERS (using inheritance)
-// ---------------------------------------------------------
-
-// JSON → XML (Class Adapter)
+// CLASS ADAPTERS (Using Inheritance)
 class JsonToXmlClassAdapter extends JSONProcessor {
     public String convertToXml(JSONData jsonData) {
         String processedJson = processJSON(jsonData.data);
@@ -62,7 +55,6 @@ class JsonToXmlClassAdapter extends JSONProcessor {
     }
 }
 
-// XML → JSON (Class Adapter)
 class XmlToJsonClassAdapter extends XMLProcessor {
     public String convertToJson(XMLData xmlData) {
         String processedXml = processXML(xmlData.data);
@@ -70,11 +62,7 @@ class XmlToJsonClassAdapter extends XMLProcessor {
     }
 }
 
-// ---------------------------------------------------------
-// OBJECT ADAPTERS (using composition)
-// ---------------------------------------------------------
-
-// JSON → XML (Object Adapter)
+// OBJECT ADAPTERS (Using Composition)
 class JsonToXmlObjectAdapter {
     private JSONProcessor jsonProcessor = new JSONProcessor();
 
@@ -84,7 +72,6 @@ class JsonToXmlObjectAdapter {
     }
 }
 
-// XML → JSON (Object Adapter)
 class XmlToJsonObjectAdapter {
     private XMLProcessor xmlProcessor = new XMLProcessor();
 

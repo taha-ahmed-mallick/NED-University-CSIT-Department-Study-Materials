@@ -1,9 +1,8 @@
 package Facade;
 
 public class FacadeExample {
-
 	public static void main(String[] args) {
-		System.out.println("***Facade Pattern Demo***\n");
+		System.out.println("Facade Pattern Demo: \n");
 		
 		//Creating Robots
 		RobotFacade milanoRobotFacade = new RobotFacade();
@@ -14,7 +13,5 @@ public class FacadeExample {
 		//Destroying robots
 		milanoRobotFacade.destroyMilanoRobot();
 		robonautRobotFacade.destroyRobonautRobot();
-
 	}
-
 }

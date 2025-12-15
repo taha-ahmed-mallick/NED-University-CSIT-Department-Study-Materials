@@ -37,13 +37,3 @@ select_min([H|T], Min, [H|Rest]) :-
     MinT < H, !,                                   % If tail's min is smaller, keep H in Rest
     Min = MinT.
 select_min([H|T], H, T).                           % Otherwise H is the minimum
-
-
-insertion_sort_head(List, Sorted) :-
-    insertion_sort_acc(List, [], Sorted).
-
-insertion_sort_acc([], Acc, Acc).
-insertion_sort_acc([H|T], Acc, Sorted) :-
-    insert(H, Acc, NewAcc),
-    printlist(NewAcc), nl,
-    insertion_sort_acc(T, NewAcc, Sorted).

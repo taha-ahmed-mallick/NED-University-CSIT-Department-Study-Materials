@@ -1,6 +1,3 @@
-% Muhammad Obaid
-% CT-23025   Section-A  (Lab-11)
-
 fruit(apple).
 fruit(orange).
 fruit(mango).

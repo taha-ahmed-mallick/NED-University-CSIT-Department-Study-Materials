@@ -1,5 +1,3 @@
-% Muhammad Obaid
-% CT-23025    Section-A  (Lab-7)
 age(aslam, 11).
 age(asif, 13).
 age(afsheen, 17).

@@ -1,6 +1,3 @@
-%    Muhammad Obaid
-%    CT-23025   Section-A   (Lab-4)
-
 my_atom(abc123).
 my_atom(patrick_123).
 my_atom(gayle_333).
@@ -34,18 +31,18 @@ book(title('The Art of Computer Programming'), author('Donald Knuth'), year(1968
 book(title('Clean Code'), author('Robert Martin'), year(2008)).
 
 
-query_atom :-  write('=== ATOMS ==='), nl, my_atom(Atom),  write('Atom: '), write(Atom), nl.
-query_number :- write('=== NUMBERS ==='), nl, my_num(Number), write('Number: '), write(Number), nl.
-query_variable(X) :- write('=== VARIABLES ==='), nl, my_var(X),write('Variable value: '), write(X), nl.
-query_person :- write('=== PEOPLE (Structures) ==='), nl, person(name(Name), age(Age)),write('Person: '), write(Name), write(', Age: '), write(Age), nl.
-query_book :- write('=== BOOKS (Structures) ==='), nl, book(title(Title), author(Author), year(Year)), write('Book: '), write(Title), write(', Author: '), write(Author), write(', Year: '), write(Year), nl.
+query_atom :-  write('ATOMS: '), nl, my_atom(Atom),  write('Atom: '), write(Atom), nl.
+query_number :- write('NUMBERS: '), nl, my_num(Number), write('Number: '), write(Number), nl.
+query_variable(X) :- write('VARIABLES: '), nl, my_var(X),write('Variable value: '), write(X), nl.
+query_person :- write('PEOPLE (Structures): '), nl, person(name(Name), age(Age)),write('Person: '), write(Name), write(', Age: '), write(Age), nl.
+query_book :- write('BOOKS (Structures): '), nl, book(title(Title), author(Author), year(Year)), write('Book: '), write(Title), write(', Author: '), write(Author), write(', Year: '), write(Year), nl.
 
 query_person2 :-
-    write('=== PEOPLE (Structures) ==='), nl,
+    write('PEOPLE (Structures): '), nl,
     listing(person).
 
 query_person3 :-
-    write('=== PEOPLE (Structures) ==='), nl,
+    write('PEOPLE (Structures): '), nl,
     person(Name, Age), %1st fetch then write.
     write(person(Name, Age)), nl.
 

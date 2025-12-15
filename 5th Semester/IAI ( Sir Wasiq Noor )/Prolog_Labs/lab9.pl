@@ -1,5 +1,3 @@
-
-
 list_concat([], L2, L2). %Result should be 'L2' if it is alone NOT Res.
 list_concat([H|T], L2, [H|ResTail]):- list_concat(T, L2, ResTail).
 
@@ -42,6 +40,3 @@ list_reverse([], []).
 
 % reverse using append as insert all at last from tail.
 list_reverse([H|T], Rev):- list_reverse(T, RevT), list_append(H, RevT, Rev).
-
-
-

@@ -1,6 +1,3 @@
-%    Muhammad_Obaid
-%    CT-23025     ( Lab-3 )
-
 male(babar).
 male(talib).
 female(parveen).
@@ -14,10 +11,6 @@ mother(X,Y):-parent(X,Y),female(X).
 father(X,Y):-parent(X,Y),male(X).
 sister(S,B):-parent(X,S),parent(X,B),female(S),S\=B.
 brother(B,S):-parent(X,S),parent(X,B),male(B),S\=B.
-
-
-%    Muhammad_Obaid
-%    CT-23025     ( Lab-3 )
 
 parent(1,2).
 parent(1,3).

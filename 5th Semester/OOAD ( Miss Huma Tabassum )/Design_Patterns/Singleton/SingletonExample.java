@@ -1,7 +1,6 @@
 package Singleton;
 
 public class SingletonExample {
-
 	public static void main(String[] args) {
 		System.out.println("***Singleton Pattern Demo***\n");
 		System.out.println("Trying to make a captain for your team:");
@@ -12,10 +11,7 @@ public class SingletonExample {
 		System.out.println("Trying to make another captain for your team:");
 		Captain captain2 = Captain.getCaptain();
 		
-		if (captain1 == captain2) {
-		System.out.println("captain1 and captain2 are same instance.");
-		}
-
+		if (captain1 == captain2)
+			System.out.println("captain1 and captain2 are same instance.");
 	}
-
 }

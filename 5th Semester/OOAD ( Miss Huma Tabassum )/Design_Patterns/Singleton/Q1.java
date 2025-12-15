@@ -1,30 +1,30 @@
 public class SingletonDemo {
     public static void main(String[] args) {
-        System.out.println("=== Testing Eager Initialization ===");
+        System.out.println("Testing Eager Initialization: ");
         EagerDBConnection eager1 = EagerDBConnection.getInstance();
         eager1.connect();
         EagerDBConnection eager2 = EagerDBConnection.getInstance();
         System.out.println("Same instance? " + (eager1 == eager2));
         
-        System.out.println("\n=== Testing Static Block Initialization ===");
+        System.out.println("\nNOW Static Block Initialization: ");
         StaticBlockDBConnection static1 = StaticBlockDBConnection.getInstance();
         static1.connect();
         StaticBlockDBConnection static2 = StaticBlockDBConnection.getInstance();
         System.out.println("Same instance? " + (static1 == static2));
         
-        System.out.println("\n=== Testing Lazy Initialization ===");
+        System.out.println("\nTesting Lazy Initialization: ");
         LazyDBConnection lazy1 = LazyDBConnection.getInstance();
         lazy1.connect();
         LazyDBConnection lazy2 = LazyDBConnection.getInstance();
         System.out.println("Same instance? " + (lazy1 == lazy2));
         
-        System.out.println("\n=== Testing Thread-Safe Initialization ===");
+        System.out.println("\nTesting Thread-Safe Initialization: ");
         ThreadSafeDBConnection threadSafe1 = ThreadSafeDBConnection.getInstance();
         threadSafe1.connect();
         ThreadSafeDBConnection threadSafe2 = ThreadSafeDBConnection.getInstance();
         System.out.println("Same instance? " + (threadSafe1 == threadSafe2));
         
-        System.out.println("\n=== Testing Double-Checked Locking ===");
+        System.out.println("\nTesting Double-Checked Locking: ");
         DoubleCheckedDBConnection doubleChecked1 = DoubleCheckedDBConnection.getInstance();
         doubleChecked1.connect();
         DoubleCheckedDBConnection doubleChecked2 = DoubleCheckedDBConnection.getInstance();
@@ -35,7 +35,6 @@ public class SingletonDemo {
     }
 }
 
-// 1. Eager Initialization Singleton
 final class EagerDBConnection {
     private static final EagerDBConnection instance = new EagerDBConnection();
     
@@ -52,7 +51,6 @@ final class EagerDBConnection {
     }
 }
 
-// 2. Static Block Initialization Singleton
 final class StaticBlockDBConnection {
     private static StaticBlockDBConnection instance;
     
@@ -78,7 +76,6 @@ final class StaticBlockDBConnection {
     }
 }
 
-// 3. Lazy Initialization Singleton
 final class LazyDBConnection {
     private static LazyDBConnection instance;
     
@@ -98,7 +95,6 @@ final class LazyDBConnection {
     }
 }
 
-// 4. Thread-Safe Singleton
 final class ThreadSafeDBConnection {
     private static ThreadSafeDBConnection instance;
     
@@ -118,7 +114,6 @@ final class ThreadSafeDBConnection {
     }
 }
 
-// 5. Double-Checked Locking Singleton
 final class DoubleCheckedDBConnection {
     private static volatile DoubleCheckedDBConnection instance;
     
