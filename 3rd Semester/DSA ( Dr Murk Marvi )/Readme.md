@@ -1,4 +1,4 @@
-# Algorithm Visualizer – DSA Educational Project
+# Algorithm Visualizer – DSA Educational Project <img src="Topic Codes/algovis_icon.ico" alt="Algorithm Visualizer Icon" width="40" height="40"/>
 
 Algorithm Visualizer is an **interactive educational tool** developed as part of the **DSA** course in the **3rd Semester**. It secured **1st position** in semester project exhibition.
 
